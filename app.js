@@ -9,6 +9,7 @@ const loseSpan = document.getElementById('losses');
 const drawSpan = document.getElementById('draws');
 const gameContainer = document.getElementById('game-container');
 const startGame = document.getElementById('start-game');
+const resetButton = document.getElementById('reset-button');
 // initialize state
 
 let wins = 0;
@@ -72,3 +73,12 @@ function finalScores() {
     drawSpan.textContent = draws;
 }
 
+resetButton.addEventListener('click', () => {
+    wins = 0;
+    losses = 0;
+    draws = 0;
+    winSpan.textContent = wins;
+    loseSpan.textContent = losses;
+    drawSpan.textContent = draws;
+    currentThrow.textContent = '';
+});
