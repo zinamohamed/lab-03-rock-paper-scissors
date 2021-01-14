@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { makeRPSThrow } from './utils.js';
+import { makeRPSThrow } from '../utils.js';
 
 const test = QUnit.test;
 

@@ -31,8 +31,9 @@ goButton.addEventListener('click', () => {
   // function that generates computerThrow can be found in utils.js //
 
   // store computers throw in a const //
-    
-    const computerRPSThrow = makeRPSThrow();
+
+    const computerNumber = Math.floor(Math.random() * 3) + 1;
+    const computerRPSThrow = makeRPSThrow(computerNumber);
 
   // get user's throw and store that in a const //
 
@@ -41,6 +42,7 @@ goButton.addEventListener('click', () => {
     const userThrow = selectedThrow.value;
   
   // YAY okay now compare the two, and see who wins, loses or if its a draw!! //
+  
   
     const result = didUserWin(userThrow, computerRPSThrow);
     if (result === 'win') {

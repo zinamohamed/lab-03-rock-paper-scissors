@@ -1,6 +1,6 @@
 // create function that genorates computer throw // 
-export function makeRPSThrow() {
-    const randomNumber = Math.floor(Math.random() * 3) + 1;
+export function makeRPSThrow(randomNumber) {
+    
     
     if (randomNumber === 1) {
         return 'rock';
