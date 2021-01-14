@@ -2,7 +2,7 @@
 import { makeRPSThrow } from './utils.js';
 import { didUserWin } from './utils.js';
 
-const goButton = document.getElementById('guess-botton');
+const goButton = document.getElementById('guess-button');
 const currentThrow = document.getElementById('current-game-results');
 const winSpan = document.getElementById('wins');
 const loseSpan = document.getElementById('losses');
@@ -23,7 +23,7 @@ goButton.addEventListener('click', () => {
   // function that generates computerThrow can be found in utils.js //
 
   // store computers throw in a const //
-
+    
     const computerRPSThrow = makeRPSThrow();
 
   // get user's throw and store that in a const //
@@ -34,11 +34,29 @@ goButton.addEventListener('click', () => {
   
   // YAY okay now compare the two, and see who wins, loses or if its a draw!! //
   
-    didUserWin(userThrow, computerRPSThrow); 
+    const result = didUserWin(userThrow, computerRPSThrow);
+    if (result === 'win') {
+        wins++;
+        currentThrow.textContent = 'Nice moves!';
+    }
+    
+    if (result === 'lose') {
+        losses++;
+        currentThrow.textContent = 'Gotcha!';
+    }
+    
+    if (result === 'draw') {
+        draws++;
+        currentThrow.textContent = 'Great minds think alike.';
+    }
 
-
+    finalScores();
     
 });
 
-
+function finalScores() {
+    winSpan.textContent = wins;
+    loseSpan.textContent = losses;
+    drawSpan.textContent = draws;
+}
 
