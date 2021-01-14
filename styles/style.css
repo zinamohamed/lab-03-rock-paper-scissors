@@ -1,5 +1,82 @@
+* {
+    box-sizing: border-box;
+  }
+
+
+
+body, html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'VT323', monospace;
+    background-image: url('https://cdn.dribbble.com/users/976907/screenshots/4879640/dribbble_13.gif');
+    background-size:cover;                      
+    background-repeat:no-repeat;
+    background-position:center center;
+    
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+.title {
+    font-size: 2em;
+    color:#1d3557;
+    padding: 20px;
+    margin: 20px;
+}
+
+
+button {
+    margin: 10px;
+    border: none;
+    background-color: white;
+    color: #1d3557;
+    outline:none;
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #457b9d;
+    font-family: 'VT323', monospace;
+    border-radius: 50px;
+    font-size: 2em;
+}
+
+
+button:hover {
+    transform: skew(-10deg);
+      
+ }
+
+
 label img {
     width: 100px;
     height: 100px;
 }
   
+input {
+    display: none;
+    margin: 50px;
+}
+
+input:checked + img {
+    transform: skew(-10deg);
+  }

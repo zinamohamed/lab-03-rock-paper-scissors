@@ -7,12 +7,20 @@ const currentThrow = document.getElementById('current-game-results');
 const winSpan = document.getElementById('wins');
 const loseSpan = document.getElementById('losses');
 const drawSpan = document.getElementById('draws');
+const gameContainer = document.getElementById('game-container');
+const startGame = document.getElementById('start-game');
 // initialize state
 
 let wins = 0;
 let losses = 0;
 let draws = 0;
 
+gameContainer.style.display = 'none';
+
+startGame.addEventListener('click', () => {
+    gameContainer.style.display = 'block';
+    startGame.style.display = 'none';
+});
 
 // set event listeners to update state and DOM
 
@@ -37,6 +45,8 @@ goButton.addEventListener('click', () => {
     const result = didUserWin(userThrow, computerRPSThrow);
     if (result === 'win') {
         wins++;
+
+
         currentThrow.textContent = 'Nice moves!';
     }
     

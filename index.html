@@ -15,11 +15,12 @@
 <body>
     <header>
         
-           
-        </div>
+        <button id="start-game">Start Game!</button>
+       
     </header>
     <main>
-        <section class="main-section">
+        <section id="game-container" class="game-container">
+            <h1 class="title">Rock! Paper! Scissors!</h1>
             <label>
                 <input type="radio" class="rock" name="throw" value="rock" checked>
                 <img src="assets/rock.png">
@@ -33,9 +34,11 @@
                 <img src="assets/scissors.png">
                 
             </label>
-            <button id="guess-button">
-                Shoot!
-            </button>
+            <div class="shoot">
+                <button id="guess-button">
+                    Shoot!
+                </button>
+            </div>
             <div id="current-game-results">
 
             </div>
