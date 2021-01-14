@@ -35,29 +35,51 @@ main {
     text-align: center;
 }
 
-
-
-
-.title {
-    font-size: 2em;
-    color:#1d3557;
+label {
     padding: 20px;
     margin: 20px;
+    font-size:1.5em;
+}
+
+
+.game-updates {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 1.5em;
+
+}
+
+.current-game-results {
+    margin: 20px;
+    font-size: 2.5em;
+    color:#1d3557;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.title {
+    font-size: 3em;
+    color:#1d3557;
+    padding: 20px;
+    margin-bottom: 50px;
 }
 
 
 button {
+    background-color: transparent;
     margin: 10px;
     border: none;
-    background-color: white;
     color: #1d3557;
     outline:none;
     width: 200px;
-    padding: 5px;
-    border: 1px solid #457b9d;
+    padding: 10px;
+    margin-top: 30px;
+    border: 3px solid #1d3557;
     font-family: 'VT323', monospace;
     border-radius: 50px;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 

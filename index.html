@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/home.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
@@ -22,7 +24,7 @@
         <section id="game-container" class="game-container">
             <h1 class="title">Rock! Paper! Scissors!</h1>
             <label>
-                <input type="radio" class="rock" name="throw" value="rock" checked>
+                <input type="radio" class="rock" name="throw" value="rock">
                 <img src="assets/rock.png">
             </label>
             <label>
@@ -39,20 +41,20 @@
                     Shoot!
                 </button>
             </div>
-            <div id="current-game-results">
+            <div class="current-game-results" id="current-game-results">
 
             </div>
-            <div id="win">
-                You've won <span id="wins"> </span> times!
+            <div class="game-updates">
+                <div id="win">
+                    Wins: <span id="wins"> </span> 
+                </div>
+                <div id="lose">
+                    Losses: <span id="losses"> </span> 
+                </div>
+                <div id="draw">
+                    Draws: <span id="draws"> </span> 
+                </div>
             </div>
-            <div id="lose">
-                You've lost <span id="losses"> </span> times!
-            </div>
-            <div id="draw">
-                Wow! <span id="draws"> </span> draws!
-                
-            </div>
-
 
         </section>
     </main>

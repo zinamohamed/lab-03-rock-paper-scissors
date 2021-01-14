@@ -47,17 +47,17 @@ goButton.addEventListener('click', () => {
         wins++;
 
 
-        currentThrow.textContent = 'Nice moves!';
+        currentThrow.textContent = 'Nice moves! You won.';
     }
     
     if (result === 'lose') {
         losses++;
-        currentThrow.textContent = 'Gotcha!';
+        currentThrow.textContent = 'Gotcha! You lost.';
     }
     
     if (result === 'draw') {
         draws++;
-        currentThrow.textContent = 'Great minds think alike.';
+        currentThrow.textContent = 'Ditto! Its a draw.';
     }
 
     finalScores();
