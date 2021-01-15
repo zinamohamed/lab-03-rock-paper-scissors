@@ -9,6 +9,9 @@ const loseSpan = document.getElementById('losses');
 const drawSpan = document.getElementById('draws');
 const gameContainer = document.getElementById('game-container');
 const startGame = document.getElementById('start-game');
+const resetButton = document.getElementById('reset-button');
+const instructionsContainer = document.getElementById('instructions-container');
+const triggerButton = document.getElementById('trigger-game');
 // initialize state
 
 let wins = 0;
@@ -16,10 +19,17 @@ let losses = 0;
 let draws = 0;
 
 gameContainer.style.display = 'none';
+instructionsContainer.style.display = 'none';
 
 startGame.addEventListener('click', () => {
-    gameContainer.style.display = 'block';
+    instructionsContainer.style.display = 'block';
     startGame.style.display = 'none';
+});
+
+triggerButton.addEventListener('click', () => {
+    gameContainer.style.display = 'block';
+    instructionsContainer.style.display = 'none';
+    triggerButton.style.display = 'none';
 });
 
 // set event listeners to update state and DOM
@@ -72,3 +82,12 @@ function finalScores() {
     drawSpan.textContent = draws;
 }
 
+resetButton.addEventListener('click', () => {
+    wins = 0;
+    losses = 0;
+    draws = 0;
+    winSpan.textContent = wins;
+    loseSpan.textContent = losses;
+    drawSpan.textContent = draws;
+    currentThrow.textContent = '';
+});
